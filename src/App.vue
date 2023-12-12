@@ -1,17 +1,18 @@
 <script>
+import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
 export default {
-  name: 'DefaultTemplate',
-
-  data() {
-    return {
-      text: 'Template VueJS',
-    };
+  name: 'AppRickMorty',
+  components: {
+    AppHeader,
+    AppMain,
   },
 };
 </script>
 
 <template>
-  <h1>{{ text }}</h1>
+  <AppHeader />
+  <AppMain />
 </template>
 
 <style scoped lang="scss"></style>
