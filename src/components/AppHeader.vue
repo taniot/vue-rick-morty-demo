@@ -5,7 +5,9 @@ export default {
 </script>
 <template>
   <header>
-    <h1>Rick and Morty App</h1>
+    <div class="container my-5">
+      <h1 class="text-center">Rick and Morty App</h1>
+    </div>
   </header>
 </template>
 <style></style>
