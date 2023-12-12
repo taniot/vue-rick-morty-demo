@@ -1,2 +1,4 @@
 @use './partial/common' as *;
 @use './partial/fonts' as *;
+// Import all of Bootstrap's CSS
+@import 'bootstrap/scss/bootstrap';
