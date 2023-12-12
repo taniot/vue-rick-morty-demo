@@ -1,18 +1,25 @@
 <script>
 import CharacterCard from './CharacterCard.vue';
+
 export default {
   name: 'CharacterList',
   components: {
     CharacterCard,
   },
-  data() {
-    return {
-      characters: [],
-    };
-  },
+  props: ['characters'],
 };
 </script>
 <template>
-  <CharacterCard v-for="character in characters" />
+  <div class="container">
+    <div class="characters-list d-flex flex-wrap">
+      <CharacterCard
+        v-for="character in characters"
+        :name="character.name"
+        :status="character.status"
+        :genre="character.species"
+        :img="character.image"
+      />
+    </div>
+  </div>
 </template>
 <style></style>
