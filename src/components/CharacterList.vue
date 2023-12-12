@@ -5,9 +5,14 @@ export default {
   components: {
     CharacterCard,
   },
+  data() {
+    return {
+      characters: [],
+    };
+  },
 };
 </script>
 <template>
-  <CharacterCard />
+  <CharacterCard v-for="character in characters" />
 </template>
 <style></style>
