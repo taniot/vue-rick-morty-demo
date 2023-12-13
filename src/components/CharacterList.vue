@@ -11,7 +11,7 @@ export default {
 </script>
 <template>
   <div class="container">
-    <div class="characters-list d-flex flex-wrap">
+    <div class="characters-list">
       <CharacterCard
         v-for="character in characters"
         :name="character.name"
