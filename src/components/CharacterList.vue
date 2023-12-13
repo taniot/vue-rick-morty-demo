@@ -15,9 +15,12 @@ export default {
 };
 </script>
 <template>
-  <div class="container">
-    <div class="characters-list row">
-      <div class="col col-md-3" v-for="character in store.characters">
+  <div class="container my-5">
+    <div class="row gy-4">
+      <div
+        class="col-12 col-md-3 col-sm-6"
+        v-for="character in store.characters"
+      >
         <CharacterCard
           :name="character.name"
           :status="character.status"

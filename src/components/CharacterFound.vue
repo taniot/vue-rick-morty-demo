@@ -11,5 +11,7 @@ export default {
 };
 </script>
 <template>
-  <footer>Trovati {{ store.characters.length }} personaggi</footer>
+  <footer>
+    <h5>Trovati {{ store.characters.length }} personaggi</h5>
+  </footer>
 </template>

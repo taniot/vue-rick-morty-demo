@@ -5,15 +5,11 @@ export default {
 };
 </script>
 <template>
-  <div>
-    <div>
-      <img :src="img" :alt="name" class="img-fluid" />
-    </div>
-    <h3>{{ name }}</h3>
-    <div>
-      <p>{{ status }}</p>
-      <p>{{ genre }}</p>
-    </div>
-  </div>
+  <article class="text-center">
+    <img :src="img" :alt="name" class="img-fluid rounded-circle shadow" />
+    <h3 class="my-3">{{ name }}</h3>
+    <h5>{{ status }}</h5>
+    <h5>{{ genre }}</h5>
+  </article>
 </template>
 <style></style>

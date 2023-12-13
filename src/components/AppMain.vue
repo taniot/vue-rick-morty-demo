@@ -15,20 +15,31 @@ export default {
       store,
     };
   },
+  methods: {
+    search() {
+      axios
+        .get(
+          this.store.apiRickAndMorty.defaultURL +
+            this.store.apiRickAndMorty.characters,
+          {
+            params: {
+              name: this.store.searchKey,
+              status: this.store.searchStatus,
+            },
+          }
+        )
+        .then((response) => {
+          this.store.characters = response.data.results;
+        });
+    },
+  },
   created() {
-    axios
-      .get(
-        this.store.apiRickAndMorty.defaultURL +
-          this.store.apiRickAndMorty.characters
-      )
-      .then((response) => {
-        this.store.characters = response.data.results;
-      });
+    this.search();
   },
 };
 </script>
 <template>
-  <AppSearch />
+  <AppSearch @pippo="search" />
   <CharacterList />
 </template>
 <style></style>
