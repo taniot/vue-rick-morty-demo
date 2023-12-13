@@ -1,10 +1,15 @@
 <script>
+import { store } from '../store';
 export default {
   name: 'CharacterFound',
-  props: ['found'],
+  data() {
+    return {
+      store: store, //=> { key: value, key: value},
+      prova: true,
+    };
+  },
 };
 </script>
 <template>
-  <footer>Trovati {{ found }} personaggi</footer>
+  <footer>Trovati {{ store.characters.length }} personaggi</footer>
 </template>
-<style></style>
