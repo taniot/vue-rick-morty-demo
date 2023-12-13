@@ -29,6 +29,6 @@ export default {
 </script>
 <template>
   <AppSearch />
-  <CharacterList :characters="store.characters" />
+  <CharacterList />
 </template>
 <style></style>

@@ -1,4 +1,5 @@
 <script>
+import { store } from '../store';
 import CharacterCard from './CharacterCard.vue';
 
 export default {
@@ -6,14 +7,18 @@ export default {
   components: {
     CharacterCard,
   },
-  props: ['characters'],
+  data() {
+    return {
+      store,
+    };
+  },
 };
 </script>
 <template>
   <div class="container">
     <div class="characters-list">
       <CharacterCard
-        v-for="character in characters"
+        v-for="character in store.characters"
         :name="character.name"
         :status="character.status"
         :genre="character.species"
