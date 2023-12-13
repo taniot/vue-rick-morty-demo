@@ -16,14 +16,15 @@ export default {
 </script>
 <template>
   <div class="container">
-    <div class="characters-list">
-      <CharacterCard
-        v-for="character in store.characters"
-        :name="character.name"
-        :status="character.status"
-        :genre="character.species"
-        :img="character.image"
-      />
+    <div class="characters-list row">
+      <div class="col col-md-3" v-for="character in store.characters">
+        <CharacterCard
+          :name="character.name"
+          :status="character.status"
+          :genre="character.species"
+          :img="character.image"
+        />
+      </div>
     </div>
   </div>
 </template>
